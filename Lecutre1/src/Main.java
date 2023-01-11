@@ -1,18 +1,23 @@
-import java.util.Scanner;
+//problem #2
+import java.util.Random;
 public class Main {
-    public static void main (String[] args) {
-Scanner console = new Scanner(System.in);
-System.out.println("Choose a small number");
-int y = console.nextInt();
+    public static void main(String args[]) {
+        Random rand = new Random();
+        int min = 1;
+        int max = 100;
+        int result= rand.nextInt(max-min) + min;
 
-System.out.println("Choose a larger number");
-int x = console.nextInt();
-
-int total = x + y;
-
-System.out.println("Your Numbers total to " + total);
-
-
+        if(result < 10) {
+            System.out.println(result);
+        }
+         else if (result < 50) {
+            System.out.println(result + 100);
+        }
+        else {
+            System.out.println(result - 100);
+        }
+        System.out.print("Your results is" + result);
     
-}
+   
+    }
 }
